@@ -1,23 +1,44 @@
 package com.company;
 
 public class Juego {
-    public int vidas;
+    private int vidas;
+    private int vidasIniciales;
+    private static int record=0;
 
     public Juego(int vidas){
         this.vidas=vidas;
+        this.vidasIniciales=vidas;
     }
     public void MuestraVidasRestantes(){
         System.out.println("Numero de vidas restantes:"+vidas);
     }
-
-    public static void main(String[] args) {
-        Juego juego1=new Juego(5);
-        juego1.MuestraVidasRestantes();
-        juego1.vidas--;
-        Juego juego2=new Juego(5);
-        juego1.MuestraVidasRestantes();
-        juego2.MuestraVidasRestantes();
+    public boolean QuitaVida(){
+        this.vidas--;
+        if (this.vidas==0){
+            System.out.println("Juego terminado");
+            return false;
+        }else{
+            return true;
+        }
     }
+    public void ReiniciarPartida(){
+        this.vidas=this.vidasIniciales;
+    }
+    public void ActualizaRecord(){
+        if(this.vidas>Juego.record){
+            Juego.record=this.vidas;
+            System.out.println("Se ha batido el record: "+Juego.record);
+
+        }else if (this.vidas==Juego.record){
+            System.out.println("Se ha alcanzado el record");
+
+        }
+
+    }
+
+
+
+
 
 }
 
