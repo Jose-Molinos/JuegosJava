@@ -1,10 +1,16 @@
 package com.company;
 
-public class Main {
+public class Aplicacion {//antes era main (se cambio el nombre)
 
     public static void main(String[] args) {
 	// write your code here
-        Juego juego1=new Juego(5);
+        JuegoAdivinaNumero juego=new JuegoAdivinaNumero(5,7);
+        juego.Juega();
+
+
+
+
+       /* Juego juego1=new Juego(5);
         juego1.ActualizaRecord();
         Juego juego2=new Juego(5);
         juego1.QuitaVida();
@@ -12,10 +18,10 @@ public class Main {
         juego1.MuestraVidasRestantes();
         juego1.ReiniciarPartida();
         juego1.MuestraVidasRestantes();
-        juego1.ActualizaRecord();
+        juego1.ActualizaRecord();*/
 
 
-
+// Este era el main dentro de la clase juego
         /*Juego juego1=new Juego(5);
         juego1.MuestraVidasRestantes();
         juego1.vidas--;

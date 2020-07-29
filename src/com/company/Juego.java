@@ -1,6 +1,6 @@
 package com.company;
 
-public class Juego {
+public abstract class Juego {
     private int vidas;
     private int vidasIniciales;
     private static int record=0;
@@ -35,6 +35,10 @@ public class Juego {
         }
 
     }
+    public abstract void Juega();
+
+
+
 
 
 
