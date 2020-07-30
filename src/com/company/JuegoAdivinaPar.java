@@ -14,4 +14,10 @@ public class JuegoAdivinaPar extends JuegoAdivinaNumero {
             return false;
         }
     }
-}
+    public void MuestraNombre(){
+        System.out.printf("Juego adivina numero par ");
+    }
+    public void MuestraInfo() {
+        System.out.printf("Tienes que adivinar el numero antes de quedarte sin vidas, solo tienes 3 vidas");
+        this.MuestraVidasRestantes();
+}}
