@@ -21,23 +21,28 @@ public class JuegoAdivinaNumero extends Juego {
             Scanner leer = new Scanner(System.in);
             numero=leer.nextInt();
             leer.nextLine();
-            if (numero == numeroAdivinar) {
-                System.out.println("Acertaste");
-                ActualizaRecord();
-                seguir=false;
-            } else {
-                if (QuitaVida()) {
-                    if (numero > numeroAdivinar) {
-                        System.out.println("El numero es menor");
+            if(ValidaNumero(numero)) {
+                if (numero == numeroAdivinar) {
+                    System.out.println("Acertaste");
+                    ActualizaRecord();
+                    seguir = false;
+                } else {
+                    if (QuitaVida()) {
+                        if (numero > numeroAdivinar) {
+                            System.out.println("El numero es menor");
+                        } else {
+                            System.out.println("El numero es mayor");
+                        }
+                        System.out.println("Intentalo de nuevo");
                     } else {
-                        System.out.println("El numero es mayor");
+                        seguir = false;
                     }
-                    System.out.println("Intentalo de nuevo");
-                }else {
-                    seguir=false;
                 }
             }
-
         } while (seguir);
     }
+    public boolean ValidaNumero (int num){
+        return true;
+    }
+
 }
