@@ -1,4 +1,6 @@
-package com.company;
+package com.company.numeros;
+
+import com.company.interfaces.Jugable;
 
 import java.util.Scanner;
 
