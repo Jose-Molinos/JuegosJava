@@ -8,10 +8,10 @@ public class JuegoAdivinaImpar extends JuegoAdivinaNumero{
     @Override
     public boolean ValidaNumero(int num) {
         if(num%2==0){
-            return false;
+            return true;
         }else {
             System.out.println("Error");
-            return true;
+            return false;
         }
     }
 }
